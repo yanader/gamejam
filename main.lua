@@ -1,12 +1,13 @@
 function _init()
+    i_archery()
 end
 
 function _update()
     move()
+    u_archery()
 end
 
 function _draw()
     cls()
-    map()
-    spr(player.spr, player.x, player.y)
+    d_archery()
 end
