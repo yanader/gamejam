@@ -6,7 +6,7 @@ end
 
 function u_archery()
     target.x = 60 + cos(time() * target.speed) * target.distance
-    if btnp(4) then
+    if btnp(4) and #arrows == 0 then
         fire_arrow()
     end
     update_arrows()
@@ -17,7 +17,6 @@ function d_archery()
     spr(player.spr, player.x, player.y)
     spr(target.spr, target.x, target.y)
     draw_arrows()
-    print(#arrows)
 end
 
 function fire_arrow()
