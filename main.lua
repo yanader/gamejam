@@ -7,5 +7,6 @@ end
 
 function _draw()
     cls()
+    map()
     spr(player.spr, player.x, player.y)
 end
