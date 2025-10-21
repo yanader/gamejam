@@ -50,9 +50,9 @@ function update_arrows()
                 and arrows[i][1] >= target.x - 2 and arrows[i][1] <= target.x + 8 then
             arrows[i][3] = false
             arrows[i][4] = true
+            player.archery_won = true
         end
     end
-    player.archery_won = true
 
     local retained_arrows = {}
     for i = 1, #arrows do
@@ -76,5 +76,6 @@ function update_arrows()
 end
 
 function archery_completed()
-    print("you have won a medal!", 10, 110, 10)
+    print("you have won a medal!", 25, 90, 10)
+    spr(9, 62, 100)
 end
