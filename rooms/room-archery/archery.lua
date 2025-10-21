@@ -28,22 +28,45 @@ function d_archery()
 end
 
 function fire_arrow()
-    add(arrows, { player.x, player.y - 5 })
+    -- {x, y, in-flight, hit-target}
+    add(arrows, { player.x, player.y - 5, true, false })
 end
 
 function draw_arrows()
     for i = 1, #arrows do
-        spr(arrow.spr, arrows[i][1], arrows[i][2])
+        if arrows[i][3] == true or arrows[i][4] == true then
+            spr(arrow.spr, arrows[i][1], arrows[i][2])
+        end
     end
 end
 
 function update_arrows()
+    -- check collision
+    for i = 1, #arrows do
+        if arrows[i][2] == target.y - 1
+                and arrows[i][1] >= target.x - 2 and arrows[i][1] <= target.x + 8 then
+            arrows[i][3] = false
+            arrows[i][4] = true
+        end
+    end
+
     local retained_arrows = {}
     for i = 1, #arrows do
-        arrows[i][2] -= arrow.speed
-        if arrows[i][2] >= 0 then
+        if arrows[i][4] == true then
             add(retained_arrows, arrows[i])
+        end
+        if arrows[i][3] == true then
+            arrows[i][2] -= arrow.speed
+            if arrows[i][2] >= 0 then
+                add(retained_arrows, arrows[i])
+            end
         end
     end
     arrows = retained_arrows
+    for i = 1, #arrows do
+        if arrows[i][4] == true then
+            arrows[i][1] = target.x
+            arrows[i][2] = target.y + 1
+        end
+    end
 end
