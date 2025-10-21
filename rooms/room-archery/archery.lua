@@ -18,10 +18,16 @@ function u_archery()
     if player.x >= 114 then
         player.x = 114
     end
+    if player.y <= 60 then
+        player.y = 60
+    end
 end
 
 function d_archery()
     map(16, 0)
+    for i = 8, 112, 8 do
+        spr(17, i, 54)
+    end
     spr(player.spr, player.x, player.y)
     spr(target.spr, target.x, target.y)
     draw_arrows()
