@@ -33,6 +33,8 @@ function d_archery()
     draw_arrows()
     if player.archery_won == true then
         archery_completed()
+    else
+        instructions()
     end
 end
 
@@ -84,4 +86,8 @@ end
 function archery_completed()
     print("you have won a medal!", 25, 90, 10)
     spr(9, 62, 100)
+end
+
+function instructions()
+    print("press x to fire an arrow", 15, 90, 10)
 end
