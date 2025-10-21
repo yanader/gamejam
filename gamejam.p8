@@ -7,7 +7,7 @@ __lua__
 #include rooms/room-archery/archery.lua
 #include rooms/room-archery/archery-objects.lua
 #include rooms/room-archery/archery-player.lua
-#include room/fruit.lua
+#include rooms/room-fruit/fruit.lua
 
 __gfx__
 000000000cccc0000000000000000000009000000000000000000000000000000099999000009990000000000000000000000000000000000000000000000000
