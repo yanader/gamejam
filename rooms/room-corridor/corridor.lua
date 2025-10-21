@@ -3,7 +3,9 @@ function i_corridor()
         x = 65,
         y = 65,
         spr = 1,
-        state = "corridor"
+        state = "corridor",
+        archery_won = false,
+        fruit_won = false
     }
 end
 

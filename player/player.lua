@@ -1,6 +1,0 @@
--- player = {
---     x = 65,
---     y = 65,
---     spr = 1,
---     state = "corridor"
--- }
