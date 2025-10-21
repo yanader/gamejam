@@ -38,6 +38,7 @@ function u_fruit()
                     ticker = 0
                     if check_match(smashed_fruits) then
                         message = "you win!"
+                        fruit_won = true
                     else
                     message = "you lose!  press z to reset"
                     end
