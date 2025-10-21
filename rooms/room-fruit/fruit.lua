@@ -44,6 +44,9 @@ function u_fruit()
         player.x = 63
         player.y = 63
     end
+    if player.x <= 8 then
+        player.x = 8
+    end
 end
 
 function d_fruit()

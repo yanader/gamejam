@@ -15,6 +15,9 @@ function u_archery()
         player.x = 63
         player.y = 63
     end
+    if player.x >= 114 then
+        player.x = 114
+    end
 end
 
 function d_archery()
