@@ -1,5 +1,5 @@
 function i_fruit()
-    smashed_fruits = {16, 0, 0}
+    smashed_fruits = { 16, 0, 0 }
     fruits = { 2, 3, 4, 5, 6 }
     fruit1 = 0
     fruit2 = 0
@@ -38,22 +38,19 @@ function u_fruit()
                     ticker = 0
                     if check_match(smashed_fruits) then
                         message = "you win!"
-                        fruit_won = true
+                        player.fruit_won = true
                     else
-                    message = "you lose!  press z to reset"
+                        message = "you lose!  press z to reset"
                     end
-                
                 end
             end
         end
     end
 
     if btnp(4) then
-        smashed_fruits = { 16, 0, 0}
+        smashed_fruits = { 16, 0, 0 }
         message = 'press x to smash each fruit'
     end
-
-    
 
     if player.x > 104 and player.y <= 70 and player.y >= 50 then
         player.state = "corridor"
@@ -73,7 +70,6 @@ function d_fruit()
     spr(fruit3, 90, 30)
     print(message, 10, 110, 10)
 end
-
 
 function check_match(a)
     local first = a[1]

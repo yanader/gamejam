@@ -26,4 +26,10 @@ end
 function d_corridor()
     map(0, 0)
     spr(player.spr, player.x, player.y)
+    if player.fruit_won == true then
+        spr(3, 40, 88)
+    end
+    if player.archery_won == true then
+        spr(9, 80, 88)
+    end
 end

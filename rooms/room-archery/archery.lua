@@ -6,7 +6,7 @@ end
 
 function u_archery()
     target.x = 60 + cos(time() * target.speed) * target.distance
-    if btnp(4) and #arrows == 0 then
+    if btnp(5) and #arrows == 0 then
         fire_arrow()
     end
     update_arrows()
