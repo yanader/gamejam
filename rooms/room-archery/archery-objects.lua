@@ -1,7 +1,7 @@
 target = {
     x = 63,
     y = 14,
-    spr = 2,
+    spr = 8,
     speed = 0.3,
     distance = 50
 }
@@ -12,5 +12,6 @@ archery_map = {
 }
 
 arrow = {
-    speed = 10
+    speed = 10,
+    spr = 7
 }

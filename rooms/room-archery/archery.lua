@@ -33,7 +33,7 @@ end
 
 function draw_arrows()
     for i = 1, #arrows do
-        spr(3, arrows[i][1], arrows[i][2])
+        spr(arrow.spr, arrows[i][1], arrows[i][2])
     end
 end
 
