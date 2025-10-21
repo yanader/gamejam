@@ -25,6 +25,9 @@ function d_archery()
     spr(player.spr, player.x, player.y)
     spr(target.spr, target.x, target.y)
     draw_arrows()
+    if player.archery_won == true then
+        archery_completed()
+    end
 end
 
 function fire_arrow()
@@ -47,6 +50,7 @@ function update_arrows()
                 and arrows[i][1] >= target.x - 2 and arrows[i][1] <= target.x + 8 then
             arrows[i][3] = false
             arrows[i][4] = true
+            player.archery_won = true
         end
     end
 
@@ -69,4 +73,9 @@ function update_arrows()
             arrows[i][2] = target.y + 1
         end
     end
+end
+
+function archery_completed()
+    print("you have won a medal!", 25, 90, 10)
+    spr(9, 62, 100)
 end
