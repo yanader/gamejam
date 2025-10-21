@@ -2,7 +2,6 @@ pico-8 cartridge // http://www.pico-8.com
 version 43
 __lua__
 #include main.lua
-#include player/player.lua
 #include player/movement.lua
 #include rooms/room-archery/archery.lua
 #include rooms/room-archery/archery-objects.lua

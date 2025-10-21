@@ -25,6 +25,9 @@ function d_archery()
     spr(player.spr, player.x, player.y)
     spr(target.spr, target.x, target.y)
     draw_arrows()
+    if player.archery_won == true then
+        archery_completed()
+    end
 end
 
 function fire_arrow()
@@ -49,6 +52,7 @@ function update_arrows()
             arrows[i][4] = true
         end
     end
+    player.archery_won = true
 
     local retained_arrows = {}
     for i = 1, #arrows do
@@ -69,4 +73,8 @@ function update_arrows()
             arrows[i][2] = target.y + 1
         end
     end
+end
+
+function archery_completed()
+    print("you have won a medal!", 10, 110, 10)
 end
