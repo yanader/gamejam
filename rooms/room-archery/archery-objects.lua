@@ -11,7 +11,7 @@ archery_map = {
     player_y = 66
 }
 
-arrow_details = {
+arrow = {
     speed = 1,
     spr = 7
 }
