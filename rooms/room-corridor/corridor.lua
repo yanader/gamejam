@@ -32,4 +32,7 @@ function d_corridor()
     if player.archery_won == true then
         spr(9, 80, 88)
     end
+    if player.fruit_won == true and player.archery_won == true then
+        print("congratulations!!!", 30, 20, 10)
+    end
 end
