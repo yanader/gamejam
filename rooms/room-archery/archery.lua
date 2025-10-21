@@ -10,6 +10,11 @@ function u_archery()
         fire_arrow()
     end
     update_arrows()
+    if player.x < 16 and player.y <= 70 and player.y >= 50 then
+        player.state = "corridor"
+        player.x = 63
+        player.y = 63
+    end
 end
 
 function d_archery()

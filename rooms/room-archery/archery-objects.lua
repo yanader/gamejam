@@ -7,7 +7,7 @@ target = {
 }
 
 archery_map = {
-    player_x = 10,
+    player_x = 66,
     player_y = 66
 }
 
